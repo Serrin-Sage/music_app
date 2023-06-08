@@ -1,0 +1,41 @@
+.ipod-container {
+    position: relative;
+    height: 90vh;
+    width: 90vw;
+    border-radius: 20px;
+    border: solid 4px black;
+    background-color: rgb(226, 226, 226);
+
+    .ipod-shadow {
+        position: absolute;
+        height: 98.2%;
+        width: 96.7%;
+        margin-top: 5.5px;
+        margin-left: 5.4px;
+        z-index: 2;
+        border-radius: 20px 0 20px 0;
+        background-color: rgb(190, 190, 190);
+    }
+}
+
+.ipod-container::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    height: 98.7%;
+    width: 98%;
+    border-radius: 20px 3px 16px 7px;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(68, 68, 68);
+}
+
+.screen-container {
+    position: relative;
+    z-index: 3;
+}
+
+.circle-container {
+    position: relative;
+    z-index: 3;
+}
