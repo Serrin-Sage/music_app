@@ -1,7 +1,9 @@
 const Circle = () => {
   return (
     <div className="circle-container">
-      Circle
+      <div className="main-circle">
+        
+      </div>
     </div>
   )
 }
