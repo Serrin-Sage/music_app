@@ -2,41 +2,84 @@ import { useEffect, useState } from "react"
 
 const Screen = () => {
   
+  const [listenerFocus, setListenerFocus] = useState(true)
+  const [musicianFocus, setMusicianFocus] = useState(false)
+
+  const userSelection = (selection) => {
+    if (selection === "listener") {
+      setListenerFocus(true)
+      setMusicianFocus(false)
+    }
+
+    if (selection === "musician") {
+      setMusicianFocus(true)
+      setListenerFocus(false)
+    }
+  }
+
+  const ListenerScreen = () => {
+    return (
+      <div className="subscriber-form-container">
+        <h2>The best music, globally</h2>
+          <form className="subscriber-form">
+            <label className="name-label">
+              Enter Name
+            </label>
+              <input type="text" name="user-name" className="user-input"></input>
+            <br/>
+            <label className="name-label">
+              Enter Number
+            </label>
+              <input type="number" name="user-number" className="user-input"></input>
+          </form>
+          <div className="tag-line">
+            One text, every Friday.<br/>
+            One song, one playlist, one album
+          </div>
+          <button className="subscribe-button">Subscribe</button>
+      </div>
+    )
+  }
+
+  const MusicianFocus = () => {
+    return (
+      <div className="artist-form-containter">
+        <h2>Share your music, globally</h2>
+        <form className="musician-form">
+          <label className="name-label">Artist Name</label>
+          <input type="text" name="artist_name" className="user-input"/>
+          <br/>
+          <label className="name-label">Song Name</label>
+          <input type="text" name="song_name" className="user-input"/>
+          <br />
+          <label className="name-label">Description</label>
+          <textarea type="text" name="song_name" className="user-input" id="song-description"/>
+          <br />
+          <label className="name-label">Email</label>
+          <input type="text-box" name="song_name" className="user-input"/>
+        </form>
+        <button className="submit-button">Submit</button>
+      </div>
+    )
+  }
   return (
     <div className="screen-container">
       <div className="screen-content">
         <div className="left-screen-content">
           <div className='app-title'>songshare.io</div>
-          {/* <h2>The best music, globally</h2> */}
           <div>
-            <div className="user-selection">
+            <div className="user-selection" onClick={() => userSelection("listener")}>
               <div>Listener</div> <span>{`>`}</span>
             </div>
-            <div className="user-selection">
+            <div className="user-selection" onClick={() => userSelection("musician")}>
               <div>Musician</div> <span>{`>`}</span>
             </div>
           </div>
-          {/* <div>
-            One text, every Friday.<br/>
-            One song, one playlist, one album
-          </div> */}
          
         </div>
         <div className="right-screen-content">
-          <div className="subscriber-form">
-              <form>
-                <label className="name-label">
-                  Subscriber Name:
-                  <input type="text" name="user-name" className="user-input"></input>
-                </label>
-                <br/>
-                {/* <label>
-                  Subscriber Phone Number
-                  <input type="text" name="user-number" className="user-input"></input>
-                </label> */}
-              </form>
-            </div>
-            <button>Subsribe</button>
+          {listenerFocus && <ListenerScreen /> }
+          {musicianFocus && <MusicianFocus />}
         </div>
       </div>
       
