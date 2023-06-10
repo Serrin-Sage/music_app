@@ -30,10 +30,10 @@ const Screen = () => {
                   <input type="text" name="user-name" className="user-input"></input>
                 </label>
                 <br/>
-                <label>
+                {/* <label>
                   Subscriber Phone Number
                   <input type="text" name="user-number" className="user-input"></input>
-                </label>
+                </label> */}
               </form>
             </div>
             <button>Subsribe</button>
