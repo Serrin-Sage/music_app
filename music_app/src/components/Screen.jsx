@@ -74,6 +74,9 @@ const Screen = () => {
             <div className="user-selection" onClick={() => userSelection("musician")}>
               <div>Musician</div> <span>{`>`}</span>
             </div>
+            <div className="user-selection" onClick={() => userSelection("about")}>
+              <div>About</div> <span>{`>`}</span>
+            </div>
           </div>
          
         </div>

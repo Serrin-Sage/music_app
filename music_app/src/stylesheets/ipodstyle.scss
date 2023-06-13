@@ -6,35 +6,13 @@
     justify-content: space-evenly;
     position: relative;
     height: 97vh;
-    width: 97vw;
+    // width: 97vw;
     border-radius: 20px;
     // border: solid 4px black;
     background: radial-gradient(white, silver, rgb(163, 163, 163));
     box-shadow: inset 0 0 35px 5px rgba(0, 0, 0, 0.24);
 
-    // .ipod-shadow {
-    //     position: absolute;
-    //     height: 98.2%;
-    //     width: 96.7%;
-    //     margin-top: 5.5px;
-    //     margin-left: 5.4px;
-    //     z-index: 2;
-    //     border-radius: 20px 0 20px 0;
-    //     background-color: rgb(190, 190, 190);
-    // }
 }
-
-// .ipod-container::before {
-//     position: absolute;
-//     z-index: 1;
-//     content: "";
-//     height: 98.7%;
-//     width: 98%;
-//     border-radius: 20px 3px 16px 7px;
-//     bottom: 0;
-//     right: 0;
-//     background-color: rgb(68, 68, 68);
-// }
 
 .screen-container {
     width: 88%;
@@ -63,19 +41,21 @@
             .app-title {
                 width: 100%;
                 padding: 5px 0 5px 0;
-                font-size: 19px;
+                font-size: 22px;
+                letter-spacing: 2px;
                 font-weight: bold;
                 background: linear-gradient(to bottom, white, silver);
                 border-radius: 10px 0 0 0;
                 border-bottom: solid 1px rgb(117, 117, 117);
             }
             div {
-                width: 99.9%;
+                width: 100%;
                 .user-selection {
                     display: flex;
                     align-items: center;
-                    height: 35px;
+                    height: 40px;
                     font-weight: bold;
+                    cursor: pointer;
                     div {
                         display: flex;
                         align-items: center;
@@ -112,7 +92,7 @@
                 
             }
             .tag-line {
-                margin: 5px;
+                margin: 1rem;
                 font-weight: bold;
                 font-size: 2.1vh;
             }
@@ -120,42 +100,25 @@
                 margin: 1rem;
                 font-size: 2.5vh;
                 font-weight: bold;
-                width: 100px;
-                
             }
 
             .artist-form-containter {
                 h2 {
-                    font-size: 16px;
+                    font-size: 20px;
                     margin: 6px;
                 }
                 #song-description {
-                    height: 30px;
+                    height: 60px;
                     resize: none;
                 }
                 .submit-button {
-                    margin: 10px;
+                    margin: 16px;
                     font-size: 2.5vh;
                     font-weight: bold;
-                    width: 80px;
                 }
             }
         }
     }
-    // .screen-content::before {
-    //     position: absolute;
-    //     // display: block;
-    //     z-index: 10;
-    //     content: "";
-    //     height: 100%;
-    //     width: 100%;
-    //     top: 0;
-    //     left: 0;
-        
-    //     background-color: rgb(0, 0, 0);
-    //     animation: fadeout ease 2s forwards;
-    //     animation-delay: 0.5s;
-    // }
 }
 
 .name-label {
@@ -167,7 +130,7 @@
     transform: translate3d(9px, 7px, 0);
 }
 .user-input {
-    width: 105px;
+    width: 135px;
     height: 25px;
     margin-top: 1rem;
     padding-left: 5px;
@@ -219,5 +182,42 @@
 
     100% {
         content: none;
+    }
+}
+
+
+/****** MEDIA QUERIES FOR DIFFERENT SCREEN SIZES ******/
+@media (max-width: 375px) {
+    .ipod-container {
+        height: 97vh;
+        width: 97vw;
+    }
+
+    .screen-container {
+        .screen-content {
+            .left-screen-content {
+                .app-title {
+                    font-size: 19px;
+                }
+            }
+            .right-screen-content {
+                .tag-line {
+                    margin: 10px;
+                }
+                .artist-form-containter {
+                    h2 {
+                        font-size: 16px;
+                    }
+                    #song-description {
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-input {
+        width: 105px;
+        
     }
 }
