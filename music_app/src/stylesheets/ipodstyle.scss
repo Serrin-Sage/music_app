@@ -8,8 +8,8 @@
     height: 97vh;
     // width: 97vw;
     border-radius: 20px;
-    // border: solid 4px black;
-    background: radial-gradient(white, silver, rgb(163, 163, 163));
+    border: solid 4px rgba(255, 255, 255, 0.397);
+    background: radial-gradient(white, rgb(241, 241, 241), rgb(255, 255, 255));
     box-shadow: inset 0 0 35px 5px rgba(0, 0, 0, 0.24);
 
 }
@@ -86,7 +86,7 @@
             // background-repeat: no-repeat;
             .subscriber-form-container {
                 h2 {
-                    font-size: 16px;
+                    font-size: 25px;
                     margin: 6px;
                 }
                 
@@ -157,16 +157,17 @@
         justify-content: center;
         min-height: 35vh;
         min-width: 35vh;
-        border: solid 1px rgb(163, 163, 163);
+        border: solid 2px rgb(163, 163, 163);
         border-radius: 50%;
-        background: radial-gradient(white, rgb(248, 248, 248));
+        background: silver;
+        
 
         .inner-circle {
-            min-height: 15vh;
-            min-width: 15vh;
-            border: solid 1px rgb(163, 163, 163);
+            min-height: 14.5vh;
+            min-width: 14.5vh;
+            border: solid 2px rgb(97, 97, 97);
             border-radius: 50%;
-            background: radial-gradient(white, silver);
+            background: radial-gradient(white, rgb(248, 248, 248));
         }
     }
 }
@@ -203,6 +204,11 @@
             .right-screen-content {
                 .tag-line {
                     margin: 10px;
+                }
+                .subscriber-form-container {
+                    h2 {
+                        font-size: 16px
+                    }
                 }
                 .artist-form-containter {
                     h2 {
