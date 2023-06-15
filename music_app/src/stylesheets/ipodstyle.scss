@@ -6,7 +6,7 @@
     justify-content: space-evenly;
     position: relative;
     height: 97vh;
-    // width: 97vw;
+    width: 540px;
     border-radius: 20px;
     border: solid 4px rgba(255, 255, 255, 0.397);
     // background: radial-gradient(white, rgb(241, 241, 241), rgb(255, 255, 255));
@@ -16,7 +16,7 @@
 }
 
 .screen-container {
-    width: 88%;
+    width: 90%;
     position: relative;
     z-index: 3;
     cursor: default;
@@ -100,7 +100,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            // align-items: center;
             width: 255px;
             // background: url("/DavidBowie.png");
             // background-size: 50vh;
@@ -148,7 +148,45 @@
                 }
             }
 
-            
+            .song-list-container {
+                height: 100%;
+                overflow-y: auto;
+                .song-list-content {
+                    .song-card {
+                        display: flex;
+                        font-size: 12px;
+                        
+                        .song-info {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            width: 100%;
+                            // white-space:nowrap;
+                            text-align: left;
+                            padding-left: 5px;
+                            h2 {
+                                margin: 0;
+                                font-size: 16px;
+                            }
+                            p {
+                                margin: 0;
+                                text-align: left;
+                            }
+                        }
+                        .album-placeholder {
+                            height: 50px;
+                            width: 50px;
+                            background-color: rgb(165, 165, 165);
+                            background-position: center;
+                            background-size: cover;
+                        }
+                    }
+                    .song-card:hover {
+                        color: white;
+                        background: linear-gradient(to bottom, rgb(125, 143, 240), rgb(101, 101, 238));
+                    }
+                }
+            }
         }
     }
 }
