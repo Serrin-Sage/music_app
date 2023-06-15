@@ -53,10 +53,10 @@ const Screen = () => {
           <input type="text" name="song_name" className="user-input"/>
           <br />
           <label className="name-label">Description</label>
-          <textarea type="text" name="song_name" className="user-input" id="song-description"/>
+          <textarea type="text" name="description" className="user-input" id="song-description"/>
           <br />
           <label className="name-label">Email</label>
-          <input type="text-box" name="song_name" className="user-input"/>
+          <input type="text-box" name="artist_email" className="user-input"/>
         </form>
         <button className="submit-button">Submit</button>
       </div>
