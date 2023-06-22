@@ -5,8 +5,8 @@
     justify-content: center;
     justify-content: space-evenly;
     position: relative;
-    height: 97vh;
-    width: 540px;
+    height: 90vh;
+    width: 500px;
     border-radius: 20px;
     border: solid 4px rgba(255, 255, 255, 0.397);
     // background: radial-gradient(white, rgb(241, 241, 241), rgb(255, 255, 255));
@@ -239,16 +239,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 35vh;
-        min-width: 35vh;
+        min-height: 32vh;
+        min-width: 32vh;
         border: solid 2px rgb(163, 163, 163);
         border-radius: 50%;
         background: silver;
         
 
         .inner-circle {
-            min-height: 14.5vh;
-            min-width: 14.5vh;
+            min-height: 14vh;
+            min-width: 14vh;
             border: solid 2px rgb(97, 97, 97);
             border-radius: 50%;
             background: radial-gradient(white, #D9D9D2);
@@ -276,6 +276,44 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.submit-modal::backdrop {
+    background: rgba(0, 0, 0, 0.37);
+}
+.submit-modal {
+    background: #d9d9d2f1;
+    border-radius: 20px;
+    cursor: default;
+    .modal-content {
+        color: black;
+        font-weight: bold;
+
+        .playlist-container {
+            img {
+                height: 60px;
+                background: linear-gradient(to bottom, rgb(125, 143, 240), rgb(66, 66, 219));
+                border: solid 2px white;
+                border-radius: 15px;
+            }
+        }
+    }
+    .button {
+        padding: 3px;
+        margin: 1rem;
+        text-decoration: none;
+        font-size: 2.5vh;
+        font-weight: bold;
+        border: solid 2px black;
+        border-radius: 10px;
+        color: black;
+        background: white;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    .button:hover {
+        color: white;
+        background: linear-gradient(to bottom, rgb(125, 143, 240), rgb(66, 66, 219));
+    }
+}
 /****** MEDIA QUERIES FOR DIFFERENT SCREEN SIZES ******/
 
 /**** MAX-WIDTH 425PX ****/
