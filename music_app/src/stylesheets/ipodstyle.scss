@@ -6,7 +6,7 @@
     justify-content: space-evenly;
     position: relative;
     height: 90vh;
-    width: 500px;
+    width: 480px;
     border-radius: 20px;
     border: solid 4px rgba(255, 255, 255, 0.397);
     // background: radial-gradient(white, rgb(241, 241, 241), rgb(255, 255, 255));
@@ -16,7 +16,7 @@
 }
 
 .screen-container {
-    width: 90%;
+    width: 92%;
     position: relative;
     z-index: 3;
     cursor: default;
@@ -106,8 +106,9 @@
             // background-size: 50vh;
             // background-repeat: no-repeat;
             .subscriber-form-container {
+                overflow-y: auto;
                 h2 {
-                    font-size: 25px;
+                    font-size: 3vh;
                     margin: 6px;
                 }
                 .tag-line {
@@ -128,8 +129,9 @@
             }
 
             .artist-form-containter {
+                overflow-y: auto;
                 h2 {
-                    font-size: 25px;
+                    font-size: 3vh;
                     margin: 6px;
                 }
                 #song-description {
@@ -205,27 +207,30 @@
     }
 }
 
-.name-label {
-    position: absolute;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: white;
-    padding: 0 2px 0 2px;
-    transform: translate3d(9px, 3.2px, 0);
-}
-.user-input {
-    width: 165px;
-    height: 35px;
-    margin-top: 1rem;
-    padding-left: 5px;
-    background-color: white;
-    border: solid 2px silver;
-    border-radius: 5px;
-    color: black;
-    outline: none;
-}
-.user-input:focus {
-    border: solid 2px black;
+.input-container {
+    position: relative;
+    .name-label {
+        position: absolute;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: white;
+        padding: 0 2px 0 2px;
+        transform: translate3d(9px, 3.2px, 0);
+    }
+    .user-input {
+        width: 165px;
+        height: 35px;
+        margin-top: 1rem;
+        padding-left: 5px;
+        background-color: white;
+        border: solid 2px silver;
+        border-radius: 5px;
+        color: black;
+        outline: none;
+    }
+    .user-input:focus {
+        border: solid 2px black;
+    }
 }
 
 .circle-container {
@@ -373,15 +378,16 @@ input::-webkit-inner-spin-button {
             }
         }
     }
-
-    .name-label {
-        font-size: 12px;
-        transform: translate3d(9px, 8px, 0);
+    .input-container {
+        .name-label {
+            font-size: 12px;
+            transform: translate3d(9px, 8px, 0);
+        }
+        .user-input {
+            width: 135px;
+            height: 28px;
+        }  
     }
-    .user-input {
-        width: 135px;
-        height: 28px;
-    }  
 }
 
 /**** MAX-WIDTH 375PX ****/
@@ -441,15 +447,16 @@ input::-webkit-inner-spin-button {
             }
         }
     }
-
-    .name-label {
-        font-size: 12px;
-        transform: translate3d(9px, 8px, 0);
+    .input-container {
+        .name-label {
+            font-size: 12px;
+            transform: translate3d(9px, 8px, 0);
+        }
+        .user-input {
+            width: 125px;
+            height: 28px;
+        }  
     }
-    .user-input {
-        width: 125px;
-        height: 28px;
-    }  
 }
 
 /**** MAX-WIDTH 320PX ****/
@@ -509,13 +516,14 @@ input::-webkit-inner-spin-button {
             }
         }
     }
-
-    .name-label {
-        font-size: 11px;
-        transform: translate3d(9px, 8px, 0);
+    .input-container {
+        .name-label {
+            font-size: 11px;
+            transform: translate3d(9px, 8px, 0);
+        }
+        .user-input {
+            width: 105px;
+            height: 25px;
+        }  
     }
-    .user-input {
-        width: 105px;
-        height: 25px;
-    }  
 }
