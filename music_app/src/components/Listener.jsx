@@ -13,15 +13,18 @@ const Listener = () => {
     <div className="subscriber-form-container">
         <h2>The best music, globally</h2>
             <form className="subscriber-form" onSubmit={handleSubmit}>
-            <label className="name-label">
-                Enter Name
-            </label>
-            <input type="text" name="user-name" className="user-input"></input>
-            <br/>
-            <label className="name-label">
-                Enter Number
-            </label>
-            <input type="number" name="user-number" className="user-input"></input>
+            <div className="input-container">
+              <label className="name-label">
+                  Enter Name
+              </label>
+              <input type="text" name="user-name" className="user-input"></input>
+            </div>
+            <div className="input-container">
+              <label className="name-label">
+                  Enter Number
+              </label>
+              <input type="number" name="user-number" className="user-input"></input>
+            </div>
             <div className="tag-line">
                 One text, every Friday.<br/>
                 One song, one playlist, one album
