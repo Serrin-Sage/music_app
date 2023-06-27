@@ -1,4 +1,9 @@
+import { useDispatch } from "react-redux"
+import { changeUser } from "../features/userSelect"
+
 const Listener = () => {
+
+  const dispatch = useDispatch()
 
   const getModal = () => {
     const modal = document.querySelector(".submit-modal")
@@ -7,6 +12,7 @@ const Listener = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    dispatch(changeUser("listener"))
     getModal().showModal()
   }
   return (
